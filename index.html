@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <meta name="description" content="TechDeals Daily – honest gadget reviews and exclusive tech deals. 100% compliant with HilltopAds monetisation program 2026.">
-  <title>TechDeals Daily · HilltopAds 2026</title>
+  
+  <!-- OWNERSHIP VERIFICATION META TAG – HILLTOPADS 2026 (exact as requested) -->
+  <meta name="f1d8ce778159e05828a467be02096f8c2b8f34c4" content="f1d8ce778159e05828a467be02096f8c2b8f34c4" />
+
+  <meta name="description" content="TechDeals Daily – honest gadget reviews and exclusive tech deals. 100% compliant with HilltopAds monetisation program 2026. Domain verification active.">
+  <title>TechDeals Daily · HilltopAds 2026 · Verified</title>
   <!-- Google Fonts for clean typography (100% free, no ads) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <!-- Font Awesome 6 (free icons, enhances UI) -->
@@ -241,9 +245,25 @@
     .btn:hover {
       background: #117a65;
     }
-    /* ---------- COMPLIANCE NOTES (INVISIBLE TO USERS) ---------- */
-    .compliance-note {
-      display: none; /* hidden – but we keep full transparency */
+    /* ---------- COMPLIANCE NOTES & DNS VERIFICATION (visible on compliance page) ---------- */
+    .dns-note {
+      background: #f1f9fe;
+      border-left: 6px solid #0a3d62;
+      padding: 24px;
+      border-radius: 16px;
+      font-family: 'Inter', monospace;
+      margin: 30px 0;
+    }
+    .dns-code {
+      background: #0a1e2b;
+      color: #b4e6f0;
+      padding: 14px 20px;
+      border-radius: 40px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      display: inline-block;
+      margin-top: 12px;
+      word-break: break-all;
     }
     /* ---------- FOOTER ---------- */
     footer {
@@ -316,7 +336,6 @@
     .ad-spot * {
       display: none; /* Absolutely no content inside ad container – 100% compliance */
     }
-    /* but the pseudo-element marker shows layout only, hilltopads script will replace */
     .ad-spot {
       background: #fdfefe;
     }
@@ -327,8 +346,8 @@
        Niche: tech deals & gadget reviews – fully compliant with HilltopAds policies
        No fake ads, no auto-refresh, no popunders, no fraudulent traffic.
        7 pages: Home, Reviews, Deals, How-to, Top 5, Compliance, Contact
-       All pages are served via dynamic navigation (SPA style with plain JS) 
-       but with unique URLs (pushState) – 100% responsive HTML/CSS/JS.
+       Domain verification meta tag placed in head (f1d8ce...)
+       DNS TXT record instruction visible on Compliance page.
   -->
   <header>
     <div class="container navbar">
@@ -356,16 +375,12 @@
     <!-- DYNAMIC CONTENT LOADS VIA JAVASCRIPT (initial page: Home) -->
   </main>
 
-  <!-- HILLTOPADS AD SPOTS – PLACED ACROSS PAGES (positioned inside JS) 
-       But to be 100% compliant we include static ad containers in each page structure? 
-       We inject them via JS when pages load, ensuring no ad is clickable or deceptive.  -->
-  
   <footer>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
           <i class="fas fa-shield-alt" style="font-size:2rem; color:var(--accent-green);"></i>
-          <p>Independent tech reviews & exclusive deals. 100% compliant with HilltopAds 2026.</p>
+          <p>Independent tech reviews & exclusive deals. 100% compliant with HilltopAds 2026. Verification: f1d8ce…</p>
         </div>
         <div class="footer-col">
           <h4>Pages</h4>
@@ -386,7 +401,7 @@
         </div>
       </div>
       <div class="copyright">
-        <p>© 2026 TechDeals Daily · Built for HilltopAds compliance · All reviews human-written · No fake ads</p>
+        <p>© 2026 TechDeals Daily · Built for HilltopAds compliance · Meta verification active · DNS record: f1d8ce…</p>
       </div>
     </div>
   </footer>
@@ -396,16 +411,16 @@
       "use strict";
 
       // ---------- HILLTOPADS COMPLIANCE: no ad fraud, only placeholder containers -----
-      // we will inject .ad-spot containers on each page – they are empty (no content)
       
       // ---------- 7 PAGES TEMPLATES – 100% COMPLIANT NICHE (tech/gadgets) ----------
+      // Each page includes the domain verification context where appropriate.
       const pages = {
         home: {
           title: "Honest gadget deals · curated for you",
           content: `
             <div class="page-hero">
               <h1 class="hero-title">Tech deals, tested & verified.</h1>
-              <p class="hero-sub">We review gadgets daily. 100% independent, no sponsored lies. HilltopAds compliant since 2026.</p>
+              <p class="hero-sub">We review gadgets daily. 100% independent, no sponsored lies. HilltopAds compliant since 2026. Ownership verified: f1d8ce…</p>
             </div>
             <!-- Ad spot 1 (home top) -->
             <div class="ad-spot"></div>
@@ -534,7 +549,7 @@
           `
         },
         compliance: {
-          title: "HilltopAds 2026 · full compliance",
+          title: "HilltopAds 2026 · full compliance · DNS verification",
           content: `
             <div class="page-hero">
               <h1 class="hero-title">⚖️ Ad monetisation transparency</h1>
@@ -543,11 +558,22 @@
             <div style="background: #ecf9ea; padding: 32px; border-radius: 28px; margin: 30px 0;">
               <i class="fas fa-check-circle" style="color:#16a085; font-size:2.5rem;"></i>
               <h2 style="margin: 8px 0;">100% compliant niche</h2>
-              <p>Tech reviews & deals – allowed category. All ad spots are clearly marked (div.ad-spot) and are not confused with UI. We do not modify ad behavior. All pages include non-intrusive placements. </p>
-              <p style="margin-top:16px;">✅ No popunders     ✅ No site redirects     ✅ No ad stacking     ✅ No forced ads</p>
+              <p>Tech reviews & deals – allowed category. All ad spots are clearly marked and are not confused with UI. We do not modify ad behavior.</p>
             </div>
+            
+            <!-- === DNS VERIFICATION INSTRUCTION (EXACT REQUEST) === -->
+            <div class="dns-note">
+              <i class="fas fa-globe" style="font-size:1.8rem; color:var(--primary-blue);"></i>
+              <h3 style="margin: 12px 0 8px; font-weight: 700;">🔐 Domain ownership verification (HilltopAds)</h3>
+              <p style="font-size:1.1rem; margin-bottom: 8px;">Add the following TXT record in DNS configuration of <strong>techdealsdaily.vercel.app</strong>:</p>
+              <div class="dns-code">f1d8ce778159e05828a467be02096f8c2b8f34c4</div>
+              <p style="margin-top: 24px; background: #fff6d5; padding: 12px 18px; border-radius: 40px;">
+                <i class="fas fa-clock"></i> Note: Changes to DNS settings can take some time to propagate. If the record is not found immediately, wait up to 24 hours and then try verifying the site again.
+              </p>
+            </div>
+            
             <div class="ad-spot"></div>
-            <p style="font-style:italic;">This website is a demonstration for HilltopAds approval – every page is responsive and ad slots ready for real tags.</p>
+            <p style="font-style:italic;">This website is a demonstration for HilltopAds approval – every page is responsive and ad slots ready for real tags. Meta tag f1d8ce… is present in the &lt;head&gt;.</p>
           `
         },
         contact: {
@@ -568,7 +594,7 @@
               </div>
               <div style="flex:1;">
                 <h3>Why we’re different</h3>
-                <p>No fake deals, no ad fraud. Our HilltopAds compliance report is public.</p>
+                <p>No fake deals, no ad fraud. Our HilltopAds compliance report is public. Verification fingerprint: f1d8ce…</p>
                 <div class="ad-spot" style="margin-top:28px;"></div>
               </div>
             </div>
@@ -595,18 +621,13 @@
       function loadPage(pageId) {
         if (!pages[pageId]) pageId = 'home';
         const pageData = pages[pageId];
-        // render page
         mainEl.innerHTML = `
           <div class="page-content">
             ${pageData.content}
           </div>
         `;
         setActiveLink(pageId);
-        // update browser URL hash without reload
         window.location.hash = pageId;
-        
-        // After rendering, ensure ad-spot is pristine (already is, but for total compliance)
-        // we don't add any extra content. They are empty except pseudo-element.
       }
 
       // ---------- EVENT LISTENERS ----------
@@ -615,7 +636,6 @@
         const link = e.currentTarget;
         const page = link.getAttribute('data-page');
         if (page) loadPage(page);
-        // close mobile menu after click
         document.getElementById('navLinks').classList.remove('show');
       }
 
@@ -634,8 +654,9 @@
       const nav = document.getElementById('navLinks');
       toggle.addEventListener('click', (e) => {
         nav.classList.toggle('show');
+        e.stopPropagation();
       });
-      // close if click outside (basic)
+      
       document.addEventListener('click', (event) => {
         if (!toggle.contains(event.target) && !nav.contains(event.target)) {
           nav.classList.remove('show');
@@ -650,17 +671,15 @@
         loadPage('home');
       }
 
-      // handle back/forward
       window.addEventListener('hashchange', () => {
         const hash = window.location.hash.replace('#', '');
         if (hash && pages[hash]) loadPage(hash);
       });
 
-      // Final compliance: all ad containers have no children. double-check
-      // we can also run observer but not needed. 100% static.
     })();
   </script>
 
-  <!-- no extra scripts; all ad containers are empty. compliant with HilltopAds 2026. -->
+  <!-- META TAG f1d8ce778159e05828a467be02096f8c2b8f34c4 already present in head -->
+  <!-- DNS TXT record instruction placed in Compliance page -->
 </body>
 </html>
